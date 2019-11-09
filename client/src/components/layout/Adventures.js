@@ -6,7 +6,7 @@ class PeopleCard extends Component {
     let { name, company, description, src } = this.props.person;
     return (
       <div>
-        <Card style={{ height: "30rem", borderRadius: "10px" }}>
+        <Card style={{ height: "28rem", borderRadius: "10px" }}>
           <Card.Img
             variant="top"
             src={src}
