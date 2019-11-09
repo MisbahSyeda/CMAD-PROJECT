@@ -5,7 +5,7 @@ const passport = require("passport");
 
 const users = require("./routes/api/users");
 const places = require("./routes/api/places");
-
+const path = require("path");
 
 const app = express();
 
@@ -57,4 +57,12 @@ app.use("/api/places", places);
 
 const port = process.env.PORT || 5000;
 
+
+if(process.env.NODE_ENV === 'production') {
+
+  app.use(express.static('client/build'));
+  app.get('*',(req,res) => {
+    res.sendFile(path.json(__dirname,'client' ,'build', 'index.html'));
+  });
+}
 app.listen(port, () => console.log(`Server up and running on port ${port} !`));
