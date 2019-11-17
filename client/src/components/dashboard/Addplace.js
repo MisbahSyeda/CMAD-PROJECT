@@ -46,9 +46,9 @@ function Addplace() {
     <div className="overflow">
       <Header />
       <div className="row offset-3 ">
-        <div className="col s3 m3 ">
+        <div className="col s3 m3">
           <Form className="mt-15">
-            <Form.Group className="input-field col m8">
+            <Form.Group className="input-field col m8 s10">
               <Form.Control
                 type="text"
                 value={title}
@@ -58,7 +58,7 @@ function Addplace() {
               />
               <Form.Label>Title</Form.Label>
             </Form.Group>
-            <Form.Group className="input-field col m8">
+            <Form.Group className="input-field col m8 s10">
               <Form.Control
                 type="text"
                 value={price}
@@ -68,7 +68,7 @@ function Addplace() {
               />
               <Form.Label>Price</Form.Label>
             </Form.Group>
-            <Form.Group className="input-field col m8">
+            <Form.Group className="input-field col m8 s10">
               <Form.Control
                 type="text"
                 value={location}
@@ -79,7 +79,7 @@ function Addplace() {
               <Form.Label>Location</Form.Label>
             </Form.Group>
 
-            <Form.Group className="col m8">
+            <Form.Group className="col m8 s10">
               <Form.Label style={{ fontSize: "16px", color: "black" }}>
                 Description:
               </Form.Label>
@@ -91,7 +91,7 @@ function Addplace() {
               />
             </Form.Group>
 
-            <Form.Group className="col m8">
+            <Form.Group className="col m8 s10">
               <Form.Label style={{ fontSize: "18px", color: "black" }}>
                 Upload Image:
               </Form.Label>
@@ -101,14 +101,14 @@ function Addplace() {
                 onChange={e => setFile(e.target.files[0])}
               ></Form.Control>
             </Form.Group>
-            <Form.Group className="col m8 center">
+            <Form.Group className="col m8 s10 center">
               <input
                 type="button"
                 value="Host a Place"
                 onClick={uploadWithFormData}
-                className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                className="btn btn-large waves-effect waves-light hoverable blue accent-3 s8"
                 style={{
-                  width: "500px",
+                  width: "70%",
                   height: "45px",
                   borderRadius: "20px",
                   letterSpacing: "1.5px",
